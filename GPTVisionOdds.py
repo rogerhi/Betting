@@ -13,7 +13,7 @@ import openai
 import json
 
 # OpenAI API Key
-api_key = "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"
+api_key = "SK API Key"
 
 
 #remember to uncomment the subprocess to run the node screenshot.js to read in to the tesseract OCR as GPT Vision was bad

@@ -2,7 +2,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 # Load the dataset
-hawthorn_df = pd.read_csv('hawthorn.csv')
+hawthorn_df = pd.read_csv('Hawthorn.csv')
 
 # Print out the column names to check the correct column name for players
 print(hawthorn_df.columns)
@@ -25,3 +25,10 @@ supercoach_df['Player'] = supercoach_df['Player'].apply(standardize_name)
 
 # After correcting the column names, you can proceed with merging the DataFrames on the standardized player names
 # Make sure to replace the 'Hawthorn Player' and 'Supercoach Player' with the actual column names from your DataFrames
+
+
+# Merge the dataframes
+merged_df = pd.merge(hawthorn_df, supercoach_df, on='Player')
+
+# Save the merged dataframe
+merged_df.to_csv('merged_hawthorn_supercoach.csv', index=False)
